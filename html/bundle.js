@@ -7849,6 +7849,10 @@
             return true;
           } else {
             console.log(value[9]);
+            console.log(value[10]);
+            console.log(value[11]);
+            console.log(value[12]);
+            console.log(value[13]);
             console.log("Unhandled characteristic change");
             return false;
           }
