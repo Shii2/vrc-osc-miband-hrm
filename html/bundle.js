@@ -7848,6 +7848,7 @@
             await this.onAuthenticated();
             return true;
           } else {
+            console.log(value[9]);
             console.log("Unhandled characteristic change");
             return false;
           }
