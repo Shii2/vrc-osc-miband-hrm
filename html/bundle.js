@@ -7847,6 +7847,10 @@
             console.log("Successfully authenticated");
             await this.onAuthenticated();
             return true;
+          } else if (value[9] == CHUNKED2021_ENDPOINT_AUTH && value[10] == 0 && value[11] == 16 && value[12] == 5 && value[13] == 37) {
+            console.log("Successfully authenticated");
+            await this.onAuthenticated();
+            return true;
           } else {
             console.log(value[9]);
             console.log(value[10]);
