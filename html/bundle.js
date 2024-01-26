@@ -7763,6 +7763,7 @@
       console.log("Starting heart rate measurement");
       await this.chars.hrControl.writeValue(Uint8Array.from([21, 2, 0]));
       await this.chars.hrControl.writeValue(Uint8Array.from([21, 1, 0]));
+      await this.chars.sensor.writeValue(Uint8Array.from([1, 3, 25]));
       await this.startNotifications(this.chars.hrMeasure, (e) => {
         console.log("Received heart rate value: ", e.target.value);
         const heartRate = e.target.value.getInt16();
