@@ -7771,10 +7771,11 @@
         }));
       });
       await this.chars.hrControl.writeValue(Uint8Array.from([21, 1, 1]));
+      await this.chars.sensor.writeValue(Uint8Array.from([2]));
       this.hrmTimer = this.hrmTimer || setInterval(() => {
         console.log("Pinging heart rate monitor");
         this.chars.hrControl.writeValue(Uint8Array.from([22]));
-      }, 12e3);
+      }, 12000);
     }
     async startNotifications(char, cb) {
       await char.startNotifications();
